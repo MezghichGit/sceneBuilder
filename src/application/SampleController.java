@@ -61,6 +61,8 @@ public class SampleController implements Initializable{
 		
 		String maVille = pays.getValue();
 		System.out.println(maVille);
+		
+		
 		String preferences="";
 		
 		if(test.isSelected())
