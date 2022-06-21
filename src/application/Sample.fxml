@@ -81,7 +81,7 @@
                         <Font name="Broadway" size="15.0" />
                      </font>
                   </Label>
-                  <TextField>
+                  <TextField fx:id="txtPhone">
                      <HBox.margin>
                         <Insets left="140.0" />
                      </HBox.margin>
@@ -109,7 +109,7 @@
                         <Font name="Broadway" size="15.0" />
                      </font>
                   </RadioButton>
-                  <RadioButton mnemonicParsing="false" selected="true" text="Employe" toggleGroup="$profil">
+                  <RadioButton mnemonicParsing="false" text="Employe" toggleGroup="$profil">
                      <HBox.margin>
                         <Insets left="30.0" />
                      </HBox.margin>

@@ -81,7 +81,7 @@
                         <Font name="Broadway" size="15.0" />
                      </font>
                   </Label>
-                  <TextField>
+                  <TextField fx:id="txtPhone">
                      <HBox.margin>
                         <Insets left="140.0" />
                      </HBox.margin>
