@@ -1,11 +1,14 @@
 package application;
 
+import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
 
 import javafx.event.Event;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
+import javafx.scene.Scene;
 import javafx.scene.control.Alert;
 import javafx.scene.control.Alert.AlertType;
 import javafx.scene.control.Button;
@@ -15,12 +18,18 @@ import javafx.scene.control.RadioButton;
 import javafx.scene.control.TextArea;
 import javafx.scene.control.TextField;
 import javafx.scene.control.ToggleGroup;
+import javafx.scene.layout.AnchorPane;
+import javafx.stage.Stage;
 
 public class SampleController implements Initializable {
 
 	@FXML // @FXML = C'est une annotation, c'est une méta-donnée sur un objet
 	private Button btnInscription;
 
+	
+	@FXML // @FXML = C'est une annotation, c'est une méta-donnée sur un objet
+	private Button btnListe;
+	
 	@FXML
 	private TextField txtNom;
 
@@ -56,6 +65,25 @@ public class SampleController implements Initializable {
 	@Override // redefinition de la méthode se trouvant dans l'interface
 	public void initialize(URL arg0, ResourceBundle arg1) {
 		pays.getItems().addAll("Paris", "Lyon", "Marseille", "Lille", "Toulon");
+	}
+	
+	@FXML
+	private void btnListeHandler(Event e) throws IOException {
+		//System.out.println("Vers l'interface Liste des stagiaires");
+		
+		// 1) On cherche le grand père du bouton[le bouton a comme pere la scène et la scène a comme père le Stage]
+		Stage primaryStage = (Stage) btnListe.getScene().getWindow();
+		// 2) Chargement de layout (design) depuis le fichier ListeStagiaires.fxml
+		AnchorPane layoutListe = (AnchorPane)FXMLLoader.load(getClass().getResource("ListeStagiaires.fxml"));
+		
+		// 3) On créer une scène
+		Scene sceneList = new Scene(layoutListe,700,400);
+		sceneList.getStylesheets().add(getClass().getResource("application.css").toExternalForm());
+		
+		// 4) On demande à notre stage(théatre) d'affiche la nouvelle scène : sceneList
+		primaryStage.setScene(sceneList);
+		
+		
 	}
 
 	@FXML
@@ -101,11 +129,11 @@ public class SampleController implements Initializable {
 		System.out.println("******* Contenu de la liste *********");
 		System.out.println(Main.stagiaires); // L'affichage du contenu de la liste
 		
-		reinitialisationFom();
+		reinitialisationFormulaire();
 
 	}
 	
-	public void reinitialisationFom() {
+	public void reinitialisationFormulaire() {
 		/// Ré-initialiser le formulaire
 				//TextField
 				txtNom.clear();

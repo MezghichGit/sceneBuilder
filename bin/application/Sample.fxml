@@ -212,4 +212,7 @@
          </children>
       </VBox>
    </center>
+   <bottom>
+      <Button fx:id="btnListe" mnemonicParsing="false" onAction="#btnListeHandler" text="Liste des stagiaires" BorderPane.alignment="CENTER" />
+   </bottom>
 </BorderPane>

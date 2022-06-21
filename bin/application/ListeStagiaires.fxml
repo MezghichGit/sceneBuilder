@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.ListeStagiairesController">
+   <children>
+      <VBox prefHeight="403.0" prefWidth="479.0">
+         <children>
+            <Label text="Liste des stagiaires">
+               <font>
+                  <Font name="Britannic Bold" size="24.0" />
+               </font>
+               <VBox.margin>
+                  <Insets left="120.0" top="20.0" />
+               </VBox.margin>
+            </Label>
+            <TableView fx:id="tblStagiaires" prefHeight="200.0" prefWidth="200.0">
+              <columns>
+                <TableColumn fx:id="nomC" prefWidth="75.0" text="Nom" />
+                <TableColumn fx:id="emailC" prefWidth="75.0" text="Email" />
+                  <TableColumn fx:id="phoneC" prefWidth="103.0" text="Téléphone" />
+                  <TableColumn fx:id="commentaireC" prefWidth="124.0" text="Commentaire" />
+                  <TableColumn fx:id="villeC" prefWidth="75.0" text="Ville" />
+              </columns>
+               <VBox.margin>
+                  <Insets top="20.0" />
+               </VBox.margin>
+            </TableView>
+         </children>
+      </VBox>
+   </children>
+</AnchorPane>
