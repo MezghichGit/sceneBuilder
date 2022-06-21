@@ -51,7 +51,7 @@ public class SampleController implements Initializable{
 	
 
 	
-	@Override
+	@Override// redefinition de la méthode se trouvant dans l'interface
 	public void initialize(URL arg0, ResourceBundle arg1) {
 		pays.getItems().addAll("Paris", "Lyon", "Marseille","Lille","Toulon");
 	}
@@ -59,6 +59,8 @@ public class SampleController implements Initializable{
 	@FXML
 	private void btnInscriptionHandler(Event e) {
 		
+		String maVille = pays.getValue();
+		System.out.println(maVille);
 		String preferences="";
 		
 		if(test.isSelected())
