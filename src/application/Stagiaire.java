@@ -3,7 +3,7 @@ package application;
 //C'est le model
 public class Stagiaire {
 	
-	private String nom;
+    private String nom;
 	private String email;
 	private String phone;
 	private String profil;

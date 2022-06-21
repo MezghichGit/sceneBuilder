@@ -1,14 +1,19 @@
 package application;
 	
+import java.util.ArrayList;
+import java.util.List;
+
 import javafx.application.Application;
 import javafx.stage.Stage;
 import javafx.scene.Scene;
-import javafx.scene.control.ComboBox;
 import javafx.scene.layout.BorderPane;
 import javafx.fxml.FXMLLoader;
 
 
 public class Main extends Application {
+	
+	public static List<Stagiaire> stagiaires = new ArrayList<>();
+	
 	@Override
 	public void start(Stage primaryStage) {
 		try {

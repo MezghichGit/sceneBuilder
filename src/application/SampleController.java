@@ -60,7 +60,7 @@ public class SampleController implements Initializable{
 	private void btnInscriptionHandler(Event e) {
 		
 		String maVille = pays.getValue();
-		System.out.println(maVille);
+		//System.out.println(maVille);
 		
 		
 		String preferences="";
@@ -79,19 +79,24 @@ public class SampleController implements Initializable{
 		 preferences=preferences +"Dev"+"\t";
 		}
 		
-		System.out.println(preferences);
+		//System.out.println(preferences);
 		
 		RadioButton temp = (RadioButton) profil.getSelectedToggle();
-		System.out.println(temp.getText());
+		String profilStagiaire = temp.getText();
+		//System.out.println(temp.getText());
 		
 		//System.out.println("Bouton Senregistrer clicked...");
-		/*
+		
 		String nom = txtNom.getText();  // récupérer le nom
 		String email = txtEmail.getText(); // récupérer l'email
 		String phone = txtPhone.getText(); // récupérer le phone
 		String comment = txtCommentaire.getText();
-		System.out.println("Vous êtes : "+nom +" Email : "+ email + " Phone : "+phone);
-		System.out.println("Votre commentaire : "+comment);
+		//System.out.println("Vous êtes : "+nom +" Email : "+ email + " Phone : "+phone);
+		//System.out.println("Votre commentaire : "+comment);
+		
+	
+		Stagiaire stagiaire = new Stagiaire(nom,email, phone,profilStagiaire,preferences,comment,maVille);
+		Main.stagiaires.add(stagiaire);
 		
 		/// début partie alert
 		Alert alert = new Alert(AlertType.INFORMATION);
@@ -100,6 +105,9 @@ public class SampleController implements Initializable{
 		alert.setContentText("Félicitation, la session demarre en Septembre 2022");
 		alert.showAndWait();
 		/// fin partie alert*/
+		
+		System.out.println("******* Contenu de la liste *********");
+		System.out.println(Main.stagiaires); // L'affichage du contenu de la liste
 		
 	
 	}
