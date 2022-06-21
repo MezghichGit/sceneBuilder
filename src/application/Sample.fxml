@@ -165,7 +165,7 @@
                         <Font name="Broadway" size="15.0" />
                      </font>
                   </Label>
-                  <TextArea prefHeight="47.0" prefWidth="208.0">
+                  <TextArea fx:id="txtCommentaire" prefHeight="47.0" prefWidth="208.0">
                      <HBox.margin>
                         <Insets left="60.0" />
                      </HBox.margin>
