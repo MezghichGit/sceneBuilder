@@ -6,6 +6,7 @@ import javafx.fxml.FXML;
 import javafx.scene.control.Alert;
 import javafx.scene.control.Alert.AlertType;
 import javafx.scene.control.Button;
+import javafx.scene.control.CheckBox;
 import javafx.scene.control.RadioButton;
 import javafx.scene.control.TextArea;
 import javafx.scene.control.TextField;
@@ -33,7 +34,37 @@ public class SampleController {
 	private ToggleGroup profil;
 	
 	@FXML
+	private CheckBox dev;
+	
+	@FXML
+	private CheckBox test;
+	@FXML
+	private CheckBox gestion;
+	
+	@FXML
 	private void btnInscriptionHandler(Event e) {
+		
+		String preferences="";
+		
+		if(test.isSelected())
+			{
+			 preferences=preferences +"Test"+"\t";
+			}
+		if(gestion.isSelected())
+		{
+		 preferences=preferences +"Gestion"+"\t";
+		}
+		
+		if(dev.isSelected())
+		{
+		 preferences=preferences +"Dev"+"\t";
+		}
+		
+		System.out.println(preferences);
+		
+		RadioButton temp = (RadioButton) profil.getSelectedToggle();
+		System.out.println(temp.getText());
+		
 		//System.out.println("Bouton Senregistrer clicked...");
 		/*
 		String nom = txtNom.getText();  // récupérer le nom
@@ -51,7 +82,6 @@ public class SampleController {
 		alert.showAndWait();
 		/// fin partie alert*/
 		
-		RadioButton temp = (RadioButton) profil.getSelectedToggle();
-		System.out.println(temp.getText());
+	
 	}
 }

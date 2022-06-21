@@ -129,7 +129,7 @@
                         <Font name="Broadway" size="15.0" />
                      </font>
                   </Label>
-                  <CheckBox mnemonicParsing="false" selected="true" text="Dev">
+                  <CheckBox fx:id="dev" mnemonicParsing="false" selected="true" text="Dev">
                      <HBox.margin>
                         <Insets left="115.0" />
                      </HBox.margin>
@@ -137,7 +137,7 @@
                         <Font name="Broadway" size="15.0" />
                      </font>
                   </CheckBox>
-                  <CheckBox mnemonicParsing="false" text="Test">
+                  <CheckBox fx:id="test" mnemonicParsing="false" text="Test">
                      <HBox.margin>
                         <Insets left="20.0" />
                      </HBox.margin>
@@ -145,7 +145,7 @@
                         <Font name="Broadway" size="15.0" />
                      </font>
                   </CheckBox>
-                  <CheckBox mnemonicParsing="false" text="Gestion">
+                  <CheckBox fx:id="gestion" mnemonicParsing="false" text="Gestion">
                      <HBox.margin>
                         <Insets left="20.0" />
                      </HBox.margin>
