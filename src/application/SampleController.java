@@ -43,6 +43,12 @@ public class SampleController implements Initializable {
 	private CheckBox test;
 	@FXML
 	private CheckBox gestion;
+	
+	@FXML
+	private RadioButton etudiant;
+	
+	@FXML
+	private RadioButton employe;
 
 	@FXML
 	public ComboBox<String> pays = new ComboBox<>();
@@ -94,7 +100,29 @@ public class SampleController implements Initializable {
 
 		System.out.println("******* Contenu de la liste *********");
 		System.out.println(Main.stagiaires); // L'affichage du contenu de la liste
+		
+		reinitialisationFom();
 
+	}
+	
+	public void reinitialisationFom() {
+		/// Ré-initialiser le formulaire
+				//TextField
+				txtNom.clear();
+				txtEmail.clear();
+				txtPhone.clear();
+				//TextArea
+				txtCommentaire.clear();
+				// partie combox
+				pays.valueProperty().set(null);
+				// partie checkbox
+				dev.setSelected(true);
+				test.setSelected(false);
+				gestion.setSelected(false);
+				
+				// partie Bouton Radio
+				etudiant.setSelected(true);
+				employe.setSelected(false);
 	}
 
 }
