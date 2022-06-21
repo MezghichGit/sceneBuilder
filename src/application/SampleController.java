@@ -1,19 +1,24 @@
 package application;
 
 
+import java.net.URL;
+import java.util.ResourceBundle;
+
 import javafx.event.Event;
 import javafx.fxml.FXML;
+import javafx.fxml.Initializable;
 import javafx.scene.control.Alert;
 import javafx.scene.control.Alert.AlertType;
 import javafx.scene.control.Button;
 import javafx.scene.control.CheckBox;
+import javafx.scene.control.ComboBox;
 import javafx.scene.control.RadioButton;
 import javafx.scene.control.TextArea;
 import javafx.scene.control.TextField;
 import javafx.scene.control.ToggleGroup;
 
 
-public class SampleController {
+public class SampleController implements Initializable{
 	
 	@FXML     // @FXML = C'est une annotation, c'est une méta-donnée sur un objet
 	private Button btnInscription;
@@ -40,6 +45,16 @@ public class SampleController {
 	private CheckBox test;
 	@FXML
 	private CheckBox gestion;
+	
+	@FXML
+	public ComboBox<String> pays = new ComboBox<>();
+	
+
+	
+	@Override
+	public void initialize(URL arg0, ResourceBundle arg1) {
+		pays.getItems().addAll("Paris", "Lyon", "Marseille","Lille","Toulon");
+	}
 	
 	@FXML
 	private void btnInscriptionHandler(Event e) {
@@ -84,4 +99,6 @@ public class SampleController {
 		
 	
 	}
+
+	
 }

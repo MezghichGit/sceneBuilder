@@ -3,6 +3,7 @@
 <?import javafx.geometry.Insets?>
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.ComboBox?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.RadioButton?>
 <?import javafx.scene.control.TextArea?>
@@ -173,6 +174,26 @@
                </children>
                <VBox.margin>
                   <Insets left="100.0" top="10.0" />
+               </VBox.margin>
+            </HBox>
+            <HBox prefHeight="100.0" prefWidth="200.0">
+               <children>
+                  <Label text="Pays">
+                     <HBox.margin>
+                        <Insets left="100.0" />
+                     </HBox.margin>
+                     <font>
+                        <Font name="Broadway" size="15.0" />
+                     </font>
+                  </Label>
+                  <ComboBox fx:id="pays" prefWidth="150.0">
+                     <HBox.margin>
+                        <Insets left="145.0" />
+                     </HBox.margin>
+                  </ComboBox>
+               </children>
+               <VBox.margin>
+                  <Insets top="10.0" />
                </VBox.margin>
             </HBox>
             <Button fx:id="btnInscription" alignment="CENTER" mnemonicParsing="false" onAction="#btnInscriptionHandler" text="S'enregistrer" textAlignment="CENTER" textFill="#a1312b" textOverrun="WORD_ELLIPSIS">
